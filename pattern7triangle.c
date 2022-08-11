@@ -1,9 +1,10 @@
 /*Write a c program to draw the following pattern where the number of rows given as 
 user input.
-For intput = 3
-*
-* *
-* * *
+For intput = 4
+A
+B C
+D E F
+G H I J
 
 */
 
@@ -11,14 +12,16 @@ For intput = 3
 
 int main()
 {
-	int i, j, n;
+	int i, j, n, k = 0;
 	printf("\nHow many rows ? ");
 	scanf("%d",&n);
 	for(i = 1; i <= n; i = i+1) //For indicating rows
 	{
-		for(j = 1; j <= i; j++)//For printing the value of *
+		for(j = 1; j <= i; j++)//For printing the values
 		{
-			printf("* ");
+			printf("%c ",(k%26)+65);
+			k++;
+			
 		}
 		
 		printf("\n");
