@@ -1,11 +1,10 @@
 //Write a c program to check whether a given number is prime or not
 
 #include <stdio.h>
-int main()
+
+void isPrime(int n)
 {
-	int n, i, flag = 0;
-	printf("\nEnter an integer : ");
-	scanf("%d",&n);
+	int i, flag = 0;
 	for(i = 2; i <= n/2; i++)
 	{
 		if(n % i == 0)
@@ -14,13 +13,26 @@ int main()
 			break;
 		}
 	}
+	
 	if(flag == 0)
 	{
-		printf("%d is prime",n);
+		printf("%d ",n);
+	//	return 1;
 	}
-	else
+//	else
+//	{
+//	//	printf("\n%d is not prime",n);
+//		return 0;
+//	}
+}
+int main()
+{
+	int n, i, flag = 0;
+//	printf("\nEnter an integer : ");
+//	scanf("%d",&n);
+	for(i = 2; i <= 100; i++)
 	{
-		printf("%d is not prime",n);
+		isPrime(i);
 	}
 	return 0;
 }
